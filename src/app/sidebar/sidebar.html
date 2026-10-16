@@ -1,5 +1,16 @@
 <!-- Creates a layout with a left-positioned sidenav and explicit content. -->
 <mat-sidenav-container>
-  <mat-sidenav opened>Start</mat-sidenav>
-  <mat-sidenav-content>Main</mat-sidenav-content>
+  <mat-sidenav mode="side" opened class="sidebar">
+  <h2>CareSync</h2>
+  <mat-nav-list>
+    @for (item of menuItems; track item.path) {
+      <a mat-list-item [routerLink]="item.path">{{ item.label }}</a>
+    } @empty {
+      <li>There are no items.</li>
+    }
+  </mat-nav-list>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+  </mat-sidenav>
 </mat-sidenav-container>
