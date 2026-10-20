@@ -16,7 +16,7 @@ interface MenuItems {
 })
 
 export class Sidebar {
-  role: 'PATIENT' | 'DOCTOR' | 'ADMIN' = 'PATIENT';
+  role: 'PATIENT' | 'DOCTOR' | 'ADMIN' = 'DOCTOR';
 
   patientMenu: MenuItems [] = [
     {label: 'Dashboard', path: ''},

@@ -1,8 +1,8 @@
 <!-- Creates a layout with a left-positioned sidenav and explicit content. -->
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened class="sidebar">
-  <h2>CareSync</h2>
-  <mat-nav-list>
+  <img src="Images/Logo.png" class="logo">
+  <mat-nav-list class="navlist">
     @for (item of menuItems; track item.path) {
       <a mat-list-item [routerLink]="item.path">{{ item.label }}</a>
     } @empty {
@@ -10,7 +10,7 @@
     }
   </mat-nav-list>
   <mat-sidenav-content>
-    <router-outlet></router-outlet>
+    
   </mat-sidenav-content>
   </mat-sidenav>
 </mat-sidenav-container>

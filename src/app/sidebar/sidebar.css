@@ -1,6 +1,22 @@
 mat-sidenav-container {
   height: 100vh;
+  border-color: gray;
+  overflow: hidden;
+}
+
+.sidebar {
   width: 15%;
   border-right: 1px solid #ccc;
-  border-color: gray;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.navlist {
+  overflow: hidden;
+}
+
+.logo {
+  height: 8%;
+  width: 70%;
+  margin-top: 1.5rem;
 }
